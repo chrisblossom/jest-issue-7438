@@ -1,5 +1,5 @@
 'use strict';
-
+const babelJest = require('babel-jest')
 /**
  * https://facebook.github.io/jest/docs/configuration.html#options
  */
@@ -29,4 +29,7 @@ module.exports = {
      * Resets jest.spyOn mocks only
      */
     restoreMocks: true,
+    transform: {
+        "^.+\\.(js|jsx)$": require.resolve("./babelTransform.js"),
+    },
 };
