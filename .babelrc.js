@@ -3,7 +3,7 @@
 const babel = {
     presets: [
         [
-            '@babel/env',
+            'env',
             {
                 targets: {
                     node: '6.9.0',
